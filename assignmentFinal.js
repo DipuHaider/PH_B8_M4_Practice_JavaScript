@@ -10,11 +10,11 @@ function cubeNumber(number) {
 // problem 2
 function matchFinder(string1, string2) {
   if (typeof string1 !== "string" && typeof string2 !== "string") {
-    console.log("Please enter strings in both");
+    return "Please enter strings in both";
   } else if (typeof string1 !== "string") {
-    console.log("Please enter string in string1");
+    return "Please enter string in string1";
   } else if (typeof string2 !== "string") {
-    console.log("Please enter string in string2");
+    return "Please enter string in string2";
   } else {
     const booleanValue = console.log(string1.indexOf(string2) !== -1);
     return booleanValue;
@@ -27,7 +27,7 @@ function sortMaker(arr) {
   let b = arr[1];
 
   if (a === b) {
-    console.log("equal");
+    return "equal";
   } else if (a > 0 && b > 0) {
     if (a < b) {
       [a, b] = [b, a];
@@ -38,6 +38,26 @@ function sortMaker(arr) {
       return unsortedArr;
     }
   } else if (a < 0 || b < 0) {
-    console.log("Invalid Input");
+    return "Invalid Input";
   }
+}
+
+// Problem 4
+function findAddress(obj) {
+  let objStreet = obj.street;
+  let objHouse = obj.house;
+  let objSociety = obj.society;
+
+  if (typeof objStreet === "undefined") {
+    objStreet = "__";
+  }
+  if (typeof objHouse === "undefined") {
+    objHouse = "__";
+  }
+  if (typeof objSociety === "undefined") {
+    objSociety = "__";
+  }
+
+  const objOutput = console.log(objStreet + ",", objHouse + ",", objSociety);
+  return objOutput;
 }

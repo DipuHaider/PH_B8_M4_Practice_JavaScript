@@ -52,49 +52,64 @@ console.log(resultantCube);/*
 // console.log(matched);
 
 // Problem 3
-function sortMaker(arr) {
-  let a = arr[0];
-  let b = arr[1];
+// function sortMaker(arr) {
+//   let a = arr[0];
+//   let b = arr[1];
 
-  if (a === b) {
-    console.log("equal");
-  } else if (a > 0 && b > 0) {
-    // console.log("both are positive");
-    // sortArr = arr.sort((a, b) => b - a);
-    if (a < b) {
-      [a, b] = [b, a];
-      const sortedArr = console.log([a, b]);
-      return sortedArr;
-    } else {
-      //console.log(arr);
-      const unsortedArr = console.log([a, b]);
-      return unsortedArr;
-    }
-    // console.log(a, b);
-  } else if (a < 0 || b < 0) {
-    console.log("Invalid Input");
+//   if (a === b) {
+//     console.log("equal");
+//   } else if (a > 0 && b > 0) {
+//     // console.log("both are positive");
+//     // sortArr = arr.sort((a, b) => b - a);
+//     if (a < b) {
+//       [a, b] = [b, a];
+//       const sortedArr = console.log([a, b]);
+//       return sortedArr;
+//     } else {
+//       //console.log(arr);
+//       const unsortedArr = console.log([a, b]);
+//       return unsortedArr;
+//     }
+//     // console.log(a, b);
+//   } else if (a < 0 || b < 0) {
+//     console.log("Invalid Input");
+//   }
+// }
+
+// const arr1 = [2, 3];
+// sortMaker(arr1); // [2,3] [3,2]
+// const arr2 = [4, 2];
+// sortMaker(arr2); // [4,2] [4,2]
+// const arr3 = [4, 4];
+// sortMaker(arr3); // [4,4] equal
+// const arr4 = [1, 2];
+// sortMaker(arr4); // [1,2] [2,1]
+// const arr5 = [4, -2];
+// sortMaker(arr5); // [4,-2]
+
+// Problem 4
+function findAddress(obj) {
+  // let objStreet = obj.street;
+  // let objHouse = obj.house;
+  // let objSociety = obj.society;
+
+  if (typeof obj.street === "undefined") {
+    obj.street = "__";
   }
+  if (typeof obj.house === "undefined") {
+    obj.house = "__";
+  }
+  if (typeof obj.society === "undefined") {
+    obj.society = "__";
+  }
+
+  const objOutput = console.log(obj.street + ",", obj.house + ",", obj.society);
+  return objOutput;
 }
 
-const arr1 = [2, 3];
-sortMaker(arr1); // [2,3] [3,2]
-const arr2 = [4, 2];
-sortMaker(arr2); // [4,2] [4,2]
-const arr3 = [4, 4];
-sortMaker(arr3); // [4,4] equal
-const arr4 = [1, 2];
-sortMaker(arr4); // [1,2] [2,1]
-const arr5 = [4, -2];
-sortMaker(arr5); // [4,-2]
-
-//   console.log(arr);
-// let sum = 0;
-// for (var i = 0; i < arr.length; i++) {
-//   // console.log(arr[i]);
-//   const index = i;
-//   const element = arr[index];
-//   sum = sum + element;
-//   // console.log(index, element, sum);
-//   console.log(element);
-// }
-// return sum;
+const obj1 = { street: 10, house: "15A", society: "Earth" };
+findAddress(obj1);
+const obj2 = { street: 10, society: "Earth" };
+findAddress(obj2);
+const obj3 = { street: 10 };
+findAddress(obj3);
