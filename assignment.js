@@ -103,7 +103,9 @@ function findAddress(obj) {
     obj.society = "__";
   }
 
-  const objOutput = console.log(obj.street + ",", obj.house + ",", obj.society);
+  const objOutput = console.log(
+    obj.street + "," + obj.house + "," + obj.society
+  );
   return objOutput;
 }
 

@@ -58,6 +58,8 @@ function findAddress(obj) {
     objSociety = "__";
   }
 
-  const objOutput = console.log(objStreet + ",", objHouse + ",", objSociety);
+  const objOutput = console.log(
+    obj.street + "," + obj.house + "," + obj.society
+  );
   return objOutput;
 }
