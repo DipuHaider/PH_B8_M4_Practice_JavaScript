@@ -81,37 +81,73 @@ console.log(resultantCube);/*
 // const arr2 = [4, 2];
 // sortMaker(arr2); // [4,2] [4,2]
 // const arr3 = [4, 4];
-// sortMaker(arr3); // [4,4] equal
+// const a = sortMaker(arr3); // [4,4] equal
+// console.log(a);
 // const arr4 = [1, 2];
 // sortMaker(arr4); // [1,2] [2,1]
 // const arr5 = [4, -2];
-// sortMaker(arr5); // [4,-2]
+// const b = sortMaker(arr5); // [4,-2] Invalid Input
+// console.log(b);
 
 // Problem 4
-function findAddress(obj) {
-  // let objStreet = obj.street;
-  // let objHouse = obj.house;
-  // let objSociety = obj.society;
+// function findAddress(obj) {
+//   // let objStreet = obj.street;
+//   // let objHouse = obj.house;
+//   // let objSociety = obj.society;
 
-  if (typeof obj.street === "undefined") {
-    obj.street = "__";
-  }
-  if (typeof obj.house === "undefined") {
-    obj.house = "__";
-  }
-  if (typeof obj.society === "undefined") {
-    obj.society = "__";
-  }
+//   if (typeof obj.street === "undefined") {
+//     obj.street = "__";
+//   }
+//   if (typeof obj.house === "undefined") {
+//     obj.house = "__";
+//   }
+//   if (typeof obj.society === "undefined") {
+//     obj.society = "__";
+//   }
 
-  const objOutput = console.log(
-    obj.street + "," + obj.house + "," + obj.society
-  );
-  return objOutput;
+//   const objOutput = console.log(
+//     obj.street + "," + obj.house + "," + obj.society
+//   );
+//   return objOutput;
+// }
+
+// const obj1 = { street: 10, house: "15A", society: "Earth" };
+// findAddress(obj1);
+// const obj2 = { street: 10, society: "Earth" };
+// findAddress(obj2);
+// const obj3 = { street: 10 };
+// findAddress(obj3);
+
+// Problem 5
+function canPay(changeArray, totalDue) {
+  if (changeArray.length == 0) {
+    return "array is empty";
+  }
+  let sum = 0;
+  for (var i = 0; i < changeArray.length; i++) {
+    sum = sum + changeArray[i];
+  }
+  if (sum >= totalDue) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-const obj1 = { street: 10, house: "15A", society: "Earth" };
-findAddress(obj1);
-const obj2 = { street: 10, society: "Earth" };
-findAddress(obj2);
-const obj3 = { street: 10 };
-findAddress(obj3);
+const val1 = 10;
+const arr1 = [1, 2, 5];
+// canPay(arr1, val1); // false
+const a = canPay(arr1, val1); // false
+console.log(a);
+
+const val2 = 10;
+const arr2 = [1, 5, 5];
+// canPay(arr2, val2); //true
+const b = canPay(arr2, val2); //true
+console.log(b);
+
+const val3 = 10;
+const arr3 = [];
+// canPay(arr3, val3); //array is empty
+const c = canPay(arr3, val3); //array is empty
+console.log(c);

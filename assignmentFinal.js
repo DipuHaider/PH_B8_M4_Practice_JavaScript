@@ -1,4 +1,3 @@
-// problem 1
 function cubeNumber(number) {
   if (typeof number !== "number") {
     return "Please enter a number";
@@ -7,21 +6,22 @@ function cubeNumber(number) {
   return cube;
 }
 
-// problem 2
 function matchFinder(string1, string2) {
   if (typeof string1 !== "string" && typeof string2 !== "string") {
-    return "Please enter strings in both";
+    const message = console.log("Please enter strings in both");
+    return message;
   } else if (typeof string1 !== "string") {
-    return "Please enter string in string1";
+    const message = console.log("Please enter string in string1");
+    return message;
   } else if (typeof string2 !== "string") {
-    return "Please enter string in string2";
+    const message = console.log("Please enter string in string2");
+    return message;
   } else {
     const booleanValue = console.log(string1.indexOf(string2) !== -1);
     return booleanValue;
   }
 }
 
-// Problem 3
 function sortMaker(arr) {
   let a = arr[0];
   let b = arr[1];
@@ -42,24 +42,34 @@ function sortMaker(arr) {
   }
 }
 
-// Problem 4
 function findAddress(obj) {
-  let objStreet = obj.street;
-  let objHouse = obj.house;
-  let objSociety = obj.society;
-
-  if (typeof objStreet === "undefined") {
-    objStreet = "__";
+  if (typeof obj.street === "undefined") {
+    obj.street = "__";
   }
-  if (typeof objHouse === "undefined") {
-    objHouse = "__";
+  if (typeof obj.house === "undefined") {
+    obj.house = "__";
   }
-  if (typeof objSociety === "undefined") {
-    objSociety = "__";
+  if (typeof obj.society === "undefined") {
+    obj.society = "__";
   }
 
   const objOutput = console.log(
     obj.street + "," + obj.house + "," + obj.society
   );
   return objOutput;
+}
+
+function canPay(changeArray, totalDue) {
+  if (changeArray.length == 0) {
+    return "array is empty";
+  }
+  let sum = 0;
+  for (var i = 0; i < changeArray.length; i++) {
+    sum = sum + changeArray[i];
+  }
+  if (sum >= totalDue) {
+    return true;
+  } else {
+    return false;
+  }
 }
