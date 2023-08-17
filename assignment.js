@@ -13,20 +13,20 @@ console.log(resultantCube);/*
 */
 
 // problem 2
-// function matchFinder(string1, string2) {
-//   if (typeof string1 !== "string" && typeof string2 !== "string") {
-//     console.log("Please enter strings in both");
-//   } else if (typeof string1 !== "string") {
-//     console.log("Please enter string in string1");
-//   } else if (typeof string2 !== "string") {
-//     console.log("Please enter string in string2");
-//   } else {
-//     const booleanValue = console.log(string1.indexOf(string2) !== -1);
-//     return booleanValue;
-//   }
-// }
+function matchFinder(string1, string2) {
+  if (typeof string1 !== "string" && typeof string2 !== "string") {
+    console.log("Please enter strings in both");
+  } else if (typeof string1 !== "string") {
+    console.log("Please enter string in string1");
+  } else if (typeof string2 !== "string") {
+    console.log("Please enter string in string2");
+  } else {
+    const booleanValue = console.log(string1.indexOf(string2) !== -1);
+    return booleanValue;
+  }
+}
 
-// matchFinder("John Doe", "ohn");
+matchFinder("John Doe", "ohn");
 // matchFinder("Javascript", "code");
 // matchFinder("Peter Parker", "Pen");
 // matchFinder("Peter Parker", "pet");
@@ -34,22 +34,12 @@ console.log(resultantCube);/*
 // matchFinder("Javascript", 1);
 // matchFinder(1, 1);
 
-// const matched = [];
-// for (i = 0; i < string1.length; i++) {
-//   // const name = string1[i];
-//   // console.log(name);
-//   for (j = 0; j < string2.length; j++) {
-//     // const name1 = string2[j];
-//     // console.log(name1);
-//     if (string1[i] === string2[j]) {
-//       matched.push(string2[j]);
-
-//     }
-//     // const name1 = string2[j];
-//     // console.log(name1);
+// return string1.indexOf(string2) !== -1;
+//     // return booleanValue;
 //   }
 // }
-// console.log(matched);
+
+// console.log(matchFinder("John Doe", "ohn"));
 
 // Problem 3
 // function sortMaker(arr) {
@@ -119,35 +109,35 @@ console.log(resultantCube);/*
 // findAddress(obj3);
 
 // Problem 5
-function canPay(changeArray, totalDue) {
-  if (changeArray.length == 0) {
-    return "array is empty";
-  }
-  let sum = 0;
-  for (var i = 0; i < changeArray.length; i++) {
-    sum = sum + changeArray[i];
-  }
-  if (sum >= totalDue) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function canPay(changeArray, totalDue) {
+//   if (changeArray.length == 0) {
+//     return "array is empty";
+//   }
+//   let sum = 0;
+//   for (var i = 0; i < changeArray.length; i++) {
+//     sum = sum + changeArray[i];
+//   }
+//   if (sum >= totalDue) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-const val1 = 10;
-const arr1 = [1, 2, 5];
-// canPay(arr1, val1); // false
-const a = canPay(arr1, val1); // false
-console.log(a);
+// const val1 = 10;
+// const arr1 = [1, 2, 5];
+// // canPay(arr1, val1); // false
+// const a = canPay(arr1, val1); // false
+// console.log(a);
 
-const val2 = 10;
-const arr2 = [1, 5, 5];
-// canPay(arr2, val2); //true
-const b = canPay(arr2, val2); //true
-console.log(b);
+// const val2 = 10;
+// const arr2 = [1, 5, 5];
+// // canPay(arr2, val2); //true
+// const b = canPay(arr2, val2); //true
+// console.log(b);
 
-const val3 = 10;
-const arr3 = [];
-// canPay(arr3, val3); //array is empty
-const c = canPay(arr3, val3); //array is empty
-console.log(c);
+// const val3 = 10;
+// const arr3 = [];
+// // canPay(arr3, val3); //array is empty
+// const c = canPay(arr3, val3); //array is empty
+// console.log(c);
